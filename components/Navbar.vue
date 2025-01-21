@@ -15,7 +15,7 @@
             <NuxtLink class="nav-link" active-class="active" aria-current="page" to="/">LMS Home</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink class="nav-link" active-class="active" aria-current="page" to="/content">Get Started</NuxtLink>
+            <NuxtLink class="nav-link" active-class="active" aria-current="page" :to="{name: 'lms-home', params: {lang: 'en'}}">Get Started</NuxtLink>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,11 +31,11 @@
           </li>
         </ul>
 
-        
+
           <!-- <div v-if="false" class="" role="search" >
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="searchQuery" >
             <button class="btn btn-outline-primary" type="submit">Search</button>
-            
+
             <ul v-if="searchQuery.length >0">
               <li v-for="item in filteredData" :key="item.id">
                 <a href='#'>

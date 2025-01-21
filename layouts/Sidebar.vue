@@ -2,13 +2,9 @@
     <div>
         <div>
             <Navbar />
-            <div class="main-container container-fluid">
-                <aside>
-                    <ul>
-                        <li v-for="menuItem in menuItems">{{menuItem}}</li>
-                    </ul>
-                </aside>
-                <main>
+            <div class="main-container row container-fluid">
+                <Sidebar class="col-3"/>
+                <main class="col-9">
                     <slot></slot>
                 </main>
             </div>
@@ -18,7 +14,6 @@
 </template>
 
 <script setup>
-
 
 </script>
 

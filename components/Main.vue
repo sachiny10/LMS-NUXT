@@ -14,7 +14,7 @@ onMounted(async () => {
   const hiModules = import.meta.glob('@/data/hi/*.js');
   for (const path in hiModules) {
     const module = await hiModules[path]();
-    hiData.value.push(module.default); 
+    hiData.value.push(module.default);
   }
 
   console.log('English Data:', enData.value);
@@ -24,8 +24,16 @@ onMounted(async () => {
 
 <template>
     <div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h1>lms id page{{ id }}</h1>
+    </div>
+    <div>
       <ul>
-        
+
       </ul>
     </div>
 </template>

@@ -1,17 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config';
 export default defineNuxtConfig({
+  alias:{
+    "@components": "./components",
+    "@utils": "./utils",
+    "@data": "./data",
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  vite: {
-    server: {
-      fs: {
-        allow: ['data'], // Allow the "data" folder
-      },
-    },
-  },
   ssr: true,
-  css: ['/assests/styles/app.scss'], 
+  css: ['/assests/styles/app.scss'],
   app: {
     head: {
       link: [
