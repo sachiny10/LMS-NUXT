@@ -1,0 +1,36 @@
+{
+    "version": "0.1.2",
+    "key": "I",
+    "id": "inboice",
+    "plan": "Growth",
+    "name": "Inboice CRM",
+    "url": "https://demo.inboice.com",
+    "appId": "com.inboice.crm",
+    "company": "Learning Center",
+    "tagline": "CRM for future",
+    "website": "//www.inboice.com/",
+    "address": "New Delhi, Delhi, India - 110039",
+    "youtubeLink":"https://www.youtube.com/",
+    "logo":"https://dev.inboice.com/files/setting/demo_logo.png?1734848658089",
+    "hash": 1725025538457,
+    "brands": [
+        "Demo",
+        "Generic"
+    ],
+    "theme": {
+        "colors": {},
+        "login-style": "center",
+        "logo-size": 50
+    },
+    "specs": {
+        "Unit_": "Nag ",
+        "gstin": "07BJBBJ2233N1WW"
+    },
+    "broadcast": [
+        {
+            "text": "<br><b><font size=\"4\">Hello Everyone</font></b><br><br>This is sample broadcast message, admins can use it to inform users regarding some im[ortant change/policy/new etc.<br><br>",
+            "color": "primary",
+            "_Operator": "Santosh Ojha on 14/9/2024, 1:54:19 pm"
+        }
+    ]
+}
