@@ -9,7 +9,7 @@
     </div>
     <div class="btns mt-4">
       <div class="btn-group">
-        <NuxtLink type="button" class="btn btn-primary" to="/lms">
+        <NuxtLink type="button" class="btn btn-primary" to="/lms/en/introduction">
           <span class="get-started-btn"><img src="/icons/right-arrow.svg" alt="" class=".get-started-btn "></span>
           Get Started
         </NuxtLink>
@@ -39,6 +39,7 @@
 const CLIENT = inject('CLIENT');
 const personas = inject('personas');
 const persona = ref({});
+
 definePageMeta({
     name: "lms-home"
 })

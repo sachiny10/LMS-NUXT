@@ -1,8 +1,8 @@
 <template>
     <aside class="lms-sidebar">
         <ul class="lms-sidebar__menu list-unstyled ps-0">
-            <li v-for="menuItem in menuItems" class="lms-sidebar__menu-item mb-1">
-                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" :data-bs-target="'#'+menuItem.id" aria-expanded="false">
+            <li v-for="menuItem in menuItems" class="lms-sidebar__menu-item mb-1" >
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"  data-bs-toggle="collapse" :data-bs-target="'#'+menuItem.id" aria-expanded="false">
                     {{ menuItem.title }}
                 </button>
                 <div class="collapse" :id="menuItem.id">
@@ -26,22 +26,22 @@
 import fs from 'fs';
 import path from "path"
 import { toTitleCase } from '@utils/strings';
-// import { useRoute } from '#app';
-// import { useRoute } from 'vue-router';
 
-const {id, lang} = useRoute().params
+
+const route = useRoute();
 const menuItems = [];
 
-let files = fs.readdirSync(path.resolve(__dirname, `../data/${lang ?? "en"}`));
+let files = fs.readdirSync(path.resolve(__dirname, `../data/${route.params.lang ?? "en"}`));
 for (let file of files) {
     file = file.replace('.js', '');
-    const data = await import( /* @vite-ignore */path.resolve(__dirname, `../data/${lang ?? "en"}/${file}.js`));
+    const data = await import( /* @vite-ignore */path.resolve(__dirname, `../data/${route.params.lang ?? "en"}/${file}.js`));
     menuItems.push({
         id: file,
         title: toTitleCase(file),
         children: data.default.map(({id, title}) => ({id, title}))
     })
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -49,12 +49,16 @@ for (let file of files) {
     &__menu{
         list-style: none;
         padding: 0;
-        margin: 0;
+        top: 30px;
+        left: 30px;
     }
     &__menu-item{
         a{
             color: #000;
         }
     }
+}
+.active{
+    border-left: 4px solid #0d6efd;
 }
 </style>

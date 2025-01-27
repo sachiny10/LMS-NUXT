@@ -1,6 +1,5 @@
 <template>
         <div class="content font">
-
           website main page
     </div>
 </template>

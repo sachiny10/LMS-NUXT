@@ -47,7 +47,7 @@
           </div> -->
 
 
-        <button class="btn btn-link text-primary" type="button" @click="switchLang($route)">
+        <button class="btn btn-link text-primary" type="button" @click="switchLang" title ="Click to switch language ">
          <span><img src="/icons/language.svg" alt=""></span>
         </button>
       </div>
@@ -56,13 +56,17 @@
 </template>
 
 <script setup >
+import { useRoute, useRouter } from "vue-router";
 const CLIENT = inject('CLIENT');
-
+const route = useRoute();
+const router = useRouter();
+function switchLang() {
+  const newLang = route.path.includes("/en/") ? "hi" : "en";
+  router.push(route.path.replace(/\/(en|hi)\//, `/${newLang}/`));
+}
 
 </script>
 
-
-
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
