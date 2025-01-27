@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <div>
         <Navbar />
@@ -11,6 +7,9 @@
         <Footbar />
     </div>
 </template>
+<script setup>
+
+</script>
 
 <style lang="scss" scoped>
 .main-container {

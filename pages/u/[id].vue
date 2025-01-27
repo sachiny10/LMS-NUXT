@@ -1,10 +1,15 @@
 <template>
 <div>
-    Sample U page {{ id }}
+    Sample U page <b>{{ id }}</b>
 </div>
 </template>
 
 <script setup>
+definePageMeta({
+  layout: "blank",
+  name: "url-shortner",
+});
+
+
 const { id } = useRoute().params;
-console.log(id)
 </script>
